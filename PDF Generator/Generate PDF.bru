@@ -1,0 +1,3071 @@
+meta {
+  name: Generate PDF
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/pdf/create
+  body: text
+  auth: inherit
+}
+
+headers {
+  Content-Type: text/html
+}
+
+body:json {
+  
+    htmlContent: <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+      <h1>Hello World</h1>
+  </body>
+  </html>
+  
+  
+}
+
+body:text {
+  
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <meta charset="UTF-8">
+              <title>Collection Document</title>
+              <style>
+                  
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .cover-page {
+      display: flex;
+      background-color: #fff;
+      color: #1a1a1a;
+      overflow:hidden;
+      align-items:center;
+      flex-direction:row;
+      height:99vh;
+      }
+      
+      .left-side-cover {
+      height:100%;
+      width: 65%;
+      overflow: hidden;
+    }
+  
+    .left-side-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  
+    .right-side-cover {
+      flex: 1;
+      height:100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      text-align: center;
+    }
+  
+    .year-box {
+      border: 1px solid #262626;
+      padding: 0.5px 15px !important;
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: 9px;
+      color: #262626;
+      font-family: gothic;
+    }
+  
+    .main-title {
+      text-transform: uppercase;
+      font-size: 50px;
+      font-weight: 500;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: #262626;
+      font-family: gothic;
+    }
+  
+    .divider {
+      width: 24rem;
+      height: 1px;
+      background-color: #262626;
+    }
+  
+    .logo-container {
+      width: 320px;
+      height: 320px;
+      overflow: hidden;
+    }
+  
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .university {
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #262626;
+      font-family: elzaLight;
+    }
+  
+    @media print {
+      .cover-page {
+        page-break-after: always;
+      }
+    }
+  
+                  
+      .full-image-section {
+          width: 100%;
+          max-height: 100vh;
+          overflow: hidden;
+      }
+  
+      .full-image {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+      }
+  
+      .collection-page {
+          width: 100%;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          overflow:hidden;
+      }
+  
+      .cards-container {
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 64px;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 20px;
+          margin-bottom:-15px;
+          column-gap: 40px;
+      }
+      .graphic-cards-container {
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 20px;
+          margin-bottom:-15px;
+      }
+  
+      
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .header {
+      margin-top: 30px !important;
+      padding: 0px 20px 0px 80px;
+      background-color: #262626;
+      color: #ffffff;
+      font-weight: 100;
+      font-size: 40px;
+      text-transform: uppercase;
+      width: fit-content;
+      letter-spacing: 1.5px;
+      font-family:gothic;
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .card {
+      width: 16rem; /* ~68 Tailwind width */
+      height: 18rem; /* h-80 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      background-color:green;
+    }
+  
+    .upper-part {
+      width: 100%;
+      height: 90% !important;
+      overflow: hidden;
+      background-color:blue;
+    }
+  
+    .upper-part img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  
+    .lower-part-card {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1px !important;
+      text-align: center;
+      line-height:0px;
+      }
+      
+      .product-code {
+        font-size: 25px;
+        font-weight: 500;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height:0px;
+        font-family:gothic;
+        }
+        
+        .product-name {
+          font-size: 15px;
+          font-weight: 600;
+          color: #000;
+          text-transform: uppercase;
+          font-family:elzaLight;
+          line-height:0px;
+          }
+          
+          .product-detail {
+            font-size: 7px;
+            line-height:0px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #000;
+      font-family:elzaLight;
+    }
+  
+    @media print {
+      .card {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+          .image{
+      width:100%;
+      height:100%;
+      object-fit: contain;
+    }
+    .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 64px !important;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin-bottom:35px;
+      }
+  
+    .footer-note {
+      font-size: 12px;
+      padding-left: 20px;
+      color: #ef4444; /* text-red-500 */
+      font-weight: 300;
+      margin-bottom: 4px;
+    }
+  
+    .footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #262626; /* bg-neutral-800 */
+      color: #ffffff;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .left-side {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .ccm-logo-name {
+      background-color: #ef4444; /* bg-red-500 */
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-bottom:5px;  
+    }
+  
+    .university-name {
+      padding: 0px 28px;
+      font-weight: 500;
+      font-size: 40px;
+      text-transform: uppercase;
+      border-right: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-bottom:5px;
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    .footer-right {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding-right: 128px;
+      font-family:elzaLight;
+    }
+  
+    .footer-date {
+      padding: 0 20px;
+      border-right: 2px solid #ffffff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .footer-version {
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    @media print {
+      .footer {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .graphic-card {
+      width: 20rem; /* w-96 */
+      height: 15rem; /* h-60 */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      overflow: hidden;
+    }
+  
+    .graphic-card .upper-part {
+      width: 100%;
+      height: 80%;
+      overflow: hidden;
+    }
+  
+    .graphic-card .upper-part img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* object-fill */
+    }
+  
+    .graphic-card .lower-part {
+      width: 60%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px; /* text-3xl */
+      font-weight: 500; /* font-bold */
+      color: #ffffff; /* text-white */
+      text-transform: uppercase;
+      padding: 0 20px; /* px-5 */
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    @media print {
+      .graphic-card {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .graphic-header {
+      display: flex;
+      flex-direction: column;
+      gap: 2px; /* gap-1 */
+      width: 100%;
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    .graphic-title {
+      margin-top: 28px; /* mt-7 */
+      padding: 5px 20px 5px 80px; /* px-5 pl-20 py-2 */
+      background-color: #262626; /* bg-neutral-800 */
+      color: #ffffff;
+      font-weight: 500; /* font-bold */
+      font-size: 40px; /* text-3xl */
+      text-transform: uppercase;
+      width: fit-content;
+    }
+  
+    .identifiers {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* gap-5 */
+      height: 56px; /* h-14 */
+      width: 100%;
+      margin-left: 80px; /* ml-20 to align with title padding-left */
+      font-family:elzaLight;
+      font-weight:500;
+      margin-top:-15px;
+    }
+  
+    .identifier {
+      padding: 12px; /* p-3 */
+      font-size: 18px; /* text-lg */
+      color: #ffffff;
+      text-transform: capitalize;
+      font-weight: 400; /* font-normal */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .identifier.apparel {
+      background-color: #dc2626; /* bg-red-600 */
+    }
+  
+    .identifier.headwear {
+      background-color: #16a34a; /* bg-green-600 */
+    }
+  
+    @media print {
+      .graphic-header {
+        page-break-inside: avoid;
+      }
+    }
+  
+  
+      @media print {
+          .collection-page {
+              page-break-after: always;
+          }
+          
+          .collection-page:last-child {
+              page-break-after: avoid;
+          }
+          
+          .full-image-section {
+              page-break-after: always;
+          }
+      }
+  
+  
+                  
+      .full-image-section {
+          width: 100%;
+          max-height: 100vh;
+          overflow: hidden;
+      }
+  
+      .full-image {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+      }
+  
+      .collection-page {
+          width: 100%;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          overflow:hidden;
+      }
+  
+      .cards-container {
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 64px;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 20px;
+          margin-bottom:-15px;
+          column-gap: 40px;
+      }
+      .graphic-cards-container {
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 20px;
+          margin-bottom:-15px;
+      }
+  
+      
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .header {
+      margin-top: 30px !important;
+      padding: 0px 20px 0px 80px;
+      background-color: #262626;
+      color: #ffffff;
+      font-weight: 100;
+      font-size: 40px;
+      text-transform: uppercase;
+      width: fit-content;
+      letter-spacing: 1.5px;
+      font-family:gothic;
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .card {
+      width: 16rem; /* ~68 Tailwind width */
+      height: 18rem; /* h-80 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      background-color:green;
+    }
+  
+    .upper-part {
+      width: 100%;
+      height: 90% !important;
+      overflow: hidden;
+      background-color:blue;
+    }
+  
+    .upper-part img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  
+    .lower-part-card {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1px !important;
+      text-align: center;
+      line-height:0px;
+      }
+      
+      .product-code {
+        font-size: 25px;
+        font-weight: 500;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height:0px;
+        font-family:gothic;
+        }
+        
+        .product-name {
+          font-size: 15px;
+          font-weight: 600;
+          color: #000;
+          text-transform: uppercase;
+          font-family:elzaLight;
+          line-height:0px;
+          }
+          
+          .product-detail {
+            font-size: 7px;
+            line-height:0px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #000;
+      font-family:elzaLight;
+    }
+  
+    @media print {
+      .card {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+          .image{
+      width:100%;
+      height:100%;
+      object-fit: contain;
+    }
+    .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 64px !important;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin-bottom:35px;
+      }
+  
+    .footer-note {
+      font-size: 12px;
+      padding-left: 20px;
+      color: #ef4444; /* text-red-500 */
+      font-weight: 300;
+      margin-bottom: 4px;
+    }
+  
+    .footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #262626; /* bg-neutral-800 */
+      color: #ffffff;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .left-side {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .ccm-logo-name {
+      background-color: #ef4444; /* bg-red-500 */
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-bottom:5px;  
+    }
+  
+    .university-name {
+      padding: 0px 28px;
+      font-weight: 500;
+      font-size: 40px;
+      text-transform: uppercase;
+      border-right: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-bottom:5px;
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    .footer-right {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding-right: 128px;
+      font-family:elzaLight;
+    }
+  
+    .footer-date {
+      padding: 0 20px;
+      border-right: 2px solid #ffffff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .footer-version {
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    @media print {
+      .footer {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .graphic-card {
+      width: 20rem; /* w-96 */
+      height: 15rem; /* h-60 */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      overflow: hidden;
+    }
+  
+    .graphic-card .upper-part {
+      width: 100%;
+      height: 80%;
+      overflow: hidden;
+    }
+  
+    .graphic-card .upper-part img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* object-fill */
+    }
+  
+    .graphic-card .lower-part {
+      width: 60%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px; /* text-3xl */
+      font-weight: 500; /* font-bold */
+      color: #ffffff; /* text-white */
+      text-transform: uppercase;
+      padding: 0 20px; /* px-5 */
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    @media print {
+      .graphic-card {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .graphic-header {
+      display: flex;
+      flex-direction: column;
+      gap: 2px; /* gap-1 */
+      width: 100%;
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    .graphic-title {
+      margin-top: 28px; /* mt-7 */
+      padding: 5px 20px 5px 80px; /* px-5 pl-20 py-2 */
+      background-color: #262626; /* bg-neutral-800 */
+      color: #ffffff;
+      font-weight: 500; /* font-bold */
+      font-size: 40px; /* text-3xl */
+      text-transform: uppercase;
+      width: fit-content;
+    }
+  
+    .identifiers {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* gap-5 */
+      height: 56px; /* h-14 */
+      width: 100%;
+      margin-left: 80px; /* ml-20 to align with title padding-left */
+      font-family:elzaLight;
+      font-weight:500;
+      margin-top:-15px;
+    }
+  
+    .identifier {
+      padding: 12px; /* p-3 */
+      font-size: 18px; /* text-lg */
+      color: #ffffff;
+      text-transform: capitalize;
+      font-weight: 400; /* font-normal */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .identifier.apparel {
+      background-color: #dc2626; /* bg-red-600 */
+    }
+  
+    .identifier.headwear {
+      background-color: #16a34a; /* bg-green-600 */
+    }
+  
+    @media print {
+      .graphic-header {
+        page-break-inside: avoid;
+      }
+    }
+  
+  
+      @media print {
+          .collection-page {
+              page-break-after: always;
+          }
+          
+          .collection-page:last-child {
+              page-break-after: avoid;
+          }
+          
+          .full-image-section {
+              page-break-after: always;
+          }
+      }
+  
+  
+                  
+      .full-image-section {
+          width: 100%;
+          max-height: 100vh;
+          overflow: hidden;
+      }
+  
+      .full-image {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+      }
+  
+      .collection-page {
+          width: 100%;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          overflow:hidden;
+      }
+  
+      .cards-container {
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 64px;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 20px;
+          margin-bottom:-15px;
+          column-gap: 40px;
+      }
+      .graphic-cards-container {
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 20px;
+          margin-bottom:-15px;
+      }
+  
+      
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .header {
+      margin-top: 30px !important;
+      padding: 0px 20px 0px 80px;
+      background-color: #262626;
+      color: #ffffff;
+      font-weight: 100;
+      font-size: 40px;
+      text-transform: uppercase;
+      width: fit-content;
+      letter-spacing: 1.5px;
+      font-family:gothic;
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .card {
+      width: 16rem; /* ~68 Tailwind width */
+      height: 18rem; /* h-80 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      background-color:green;
+    }
+  
+    .upper-part {
+      width: 100%;
+      height: 90% !important;
+      overflow: hidden;
+      background-color:blue;
+    }
+  
+    .upper-part img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  
+    .lower-part-card {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1px !important;
+      text-align: center;
+      line-height:0px;
+      }
+      
+      .product-code {
+        font-size: 25px;
+        font-weight: 500;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height:0px;
+        font-family:gothic;
+        }
+        
+        .product-name {
+          font-size: 15px;
+          font-weight: 600;
+          color: #000;
+          text-transform: uppercase;
+          font-family:elzaLight;
+          line-height:0px;
+          }
+          
+          .product-detail {
+            font-size: 7px;
+            line-height:0px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #000;
+      font-family:elzaLight;
+    }
+  
+    @media print {
+      .card {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+          .image{
+      width:100%;
+      height:100%;
+      object-fit: contain;
+    }
+    .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 64px !important;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin-bottom:35px;
+      }
+  
+    .footer-note {
+      font-size: 12px;
+      padding-left: 20px;
+      color: #ef4444; /* text-red-500 */
+      font-weight: 300;
+      margin-bottom: 4px;
+    }
+  
+    .footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #262626; /* bg-neutral-800 */
+      color: #ffffff;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .left-side {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .ccm-logo-name {
+      background-color: #ef4444; /* bg-red-500 */
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-bottom:5px;  
+    }
+  
+    .university-name {
+      padding: 0px 28px;
+      font-weight: 500;
+      font-size: 40px;
+      text-transform: uppercase;
+      border-right: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-bottom:5px;
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    .footer-right {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding-right: 128px;
+      font-family:elzaLight;
+    }
+  
+    .footer-date {
+      padding: 0 20px;
+      border-right: 2px solid #ffffff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .footer-version {
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    @media print {
+      .footer {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .graphic-card {
+      width: 20rem; /* w-96 */
+      height: 15rem; /* h-60 */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      overflow: hidden;
+    }
+  
+    .graphic-card .upper-part {
+      width: 100%;
+      height: 80%;
+      overflow: hidden;
+    }
+  
+    .graphic-card .upper-part img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* object-fill */
+    }
+  
+    .graphic-card .lower-part {
+      width: 60%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px; /* text-3xl */
+      font-weight: 500; /* font-bold */
+      color: #ffffff; /* text-white */
+      text-transform: uppercase;
+      padding: 0 20px; /* px-5 */
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    @media print {
+      .graphic-card {
+        page-break-inside: avoid;
+      }
+    }
+  
+      
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+    .graphic-header {
+      display: flex;
+      flex-direction: column;
+      gap: 2px; /* gap-1 */
+      width: 100%;
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    .graphic-title {
+      margin-top: 28px; /* mt-7 */
+      padding: 5px 20px 5px 80px; /* px-5 pl-20 py-2 */
+      background-color: #262626; /* bg-neutral-800 */
+      color: #ffffff;
+      font-weight: 500; /* font-bold */
+      font-size: 40px; /* text-3xl */
+      text-transform: uppercase;
+      width: fit-content;
+    }
+  
+    .identifiers {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* gap-5 */
+      height: 56px; /* h-14 */
+      width: 100%;
+      margin-left: 80px; /* ml-20 to align with title padding-left */
+      font-family:elzaLight;
+      font-weight:500;
+      margin-top:-15px;
+    }
+  
+    .identifier {
+      padding: 12px; /* p-3 */
+      font-size: 18px; /* text-lg */
+      color: #ffffff;
+      text-transform: capitalize;
+      font-weight: 400; /* font-normal */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .identifier.apparel {
+      background-color: #dc2626; /* bg-red-600 */
+    }
+  
+    .identifier.headwear {
+      background-color: #16a34a; /* bg-green-600 */
+    }
+  
+    @media print {
+      .graphic-header {
+        page-break-inside: avoid;
+      }
+    }
+  
+  
+      @media print {
+          .collection-page {
+              page-break-after: always;
+          }
+          
+          .collection-page:last-child {
+              page-break-after: avoid;
+          }
+          
+          .full-image-section {
+              page-break-after: always;
+          }
+      }
+  
+  
+                  
+    .full-image-section {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      height:100vh;
+    }
+    
+    .full-image {
+      width: 100%;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+  
+    .guideline-page {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      overflow: hidden;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    @font-face {
+        font-family:elzaLight;
+        src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
+    }
+    @font-face {
+        font-family:gothic;
+        src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
+    }
+          .image{
+      width:100%;
+      height:100%;
+      object-fit: contain;
+    }
+    .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 64px !important;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin-bottom:35px;
+      }
+  
+    .footer-note {
+      font-size: 12px;
+      padding-left: 20px;
+      color: #ef4444; /* text-red-500 */
+      font-weight: 300;
+      margin-bottom: 4px;
+    }
+  
+    .footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #262626; /* bg-neutral-800 */
+      color: #ffffff;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .left-side {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .ccm-logo-name {
+      background-color: #ef4444; /* bg-red-500 */
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-bottom:5px;  
+    }
+  
+    .university-name {
+      padding: 0px 28px;
+      font-weight: 500;
+      font-size: 40px;
+      text-transform: uppercase;
+      border-right: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-bottom:5px;
+      font-family:gothic;
+      letter-spacing: 1.5px;
+    }
+  
+    .footer-right {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding-right: 128px;
+      font-family:elzaLight;
+    }
+  
+    .footer-date {
+      padding: 0 20px;
+      border-right: 2px solid #ffffff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .footer-version {
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    @media print {
+      .footer {
+        page-break-inside: avoid;
+      }
+    }
+  
+  
+    .image-container{
+      width:100%;
+      flex:1;
+      overflow:hidden;
+    }
+    
+    .image{
+      width:100%;
+      height:100%;
+      object-fit: contain;
+    }
+  
+    @media print {
+      .guideline-page {
+        page-break-after: always;
+      }
+      
+      .guideline-page:last-child {
+        page-break-after: avoid;
+      }
+    }
+  
+                  
+              </style>
+          </head>
+          <body class="dummyclass">
+              <div class="cover-page">
+        <div class="left-side-cover">
+          <img src="http://localhost:3000/images/cover_page.jpg" alt="Cover page image" />
+        </div>
+  
+        <div class="right-side-cover">
+          <div class="year-box">2025</div>
+          <h1 class="main-title">
+            LICENSED <br> APPAREL & HEADWEAR <br> CONCEPTS
+          </h1>
+          <div class="divider"></div>
+          <div class="logo-container">
+            <img src="http://localhost:3000/images/LOGO.jpg" alt="logo" />
+          </div>
+          <h2 class="university">
+            UNIV OF NEBRASKA-OMAHA
+          </h2>
+        </div>
+      </div>
+              
+          <div class="full-image-section">
+              <img src=http://localhost:3000/images/throw_back_collection.jpg alt="throw-back collection" class="full-image"/>
+          </div>
+      
+          <div class="collection-page">
+               <div class="header">
+        2025 THROWBACK COLLECTION
+      </div>
+              <div class="cards-container">
+                  
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+               <div class="header">
+        2025 THROWBACK COLLECTION
+      </div>
+              <div class="cards-container">
+                  
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+              
+      <div class="graphic-header">
+        <h1 class="graphic-title">
+          2025 THROWBACK COLLECTION - GRAPHIC OVERVIEW
+        </h1>
+        <div class="identifiers">
+          <div class="identifier apparel">
+            Indicates APPAREL Graphic
+          </div>
+          <div class="identifier headwear">
+            Indicates HEADWEAR Graphic
+          </div>
+        </div>
+      </div>
+    
+              <div class="graphic-cards-container">
+                  
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+              
+      <div class="graphic-header">
+        <h1 class="graphic-title">
+          2025 THROWBACK COLLECTION - GRAPHIC OVERVIEW
+        </h1>
+        <div class="identifiers">
+          <div class="identifier apparel">
+            Indicates APPAREL Graphic
+          </div>
+          <div class="identifier headwear">
+            Indicates HEADWEAR Graphic
+          </div>
+        </div>
+      </div>
+    
+              <div class="graphic-cards-container">
+                  
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+              
+          <div class="full-image-section">
+              <img src=http://localhost:3000/images/premium.jpg alt="throw-back collection" class="full-image"/>
+          </div>
+      
+          <div class="collection-page">
+               <div class="header">
+        2025 PREMIUM COLLECTION
+      </div>
+              <div class="cards-container">
+                  
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+               <div class="header">
+        2025 PREMIUM COLLECTION
+      </div>
+              <div class="cards-container">
+                  
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+              
+      <div class="graphic-header">
+        <h1 class="graphic-title">
+          2025 PREMIUM COLLECTION - GRAPHIC OVERVIEW
+        </h1>
+        <div class="identifiers">
+          <div class="identifier apparel">
+            Indicates APPAREL Graphic
+          </div>
+          <div class="identifier headwear">
+            Indicates HEADWEAR Graphic
+          </div>
+        </div>
+      </div>
+    
+              <div class="graphic-cards-container">
+                  
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+              
+      <div class="graphic-header">
+        <h1 class="graphic-title">
+          2025 PREMIUM COLLECTION - GRAPHIC OVERVIEW
+        </h1>
+        <div class="identifiers">
+          <div class="identifier apparel">
+            Indicates APPAREL Graphic
+          </div>
+          <div class="identifier headwear">
+            Indicates HEADWEAR Graphic
+          </div>
+        </div>
+      </div>
+    
+              <div class="graphic-cards-container">
+                  
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+              
+          <div class="full-image-section">
+              <img src=http://localhost:3000/images/classic.jpg alt="throw-back collection" class="full-image"/>
+          </div>
+      
+          <div class="collection-page">
+               <div class="header">
+        2025 CLASSIC COLLECTION
+      </div>
+              <div class="cards-container">
+                  
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+               <div class="header">
+        2025 CLASSIC COLLECTION
+      </div>
+              <div class="cards-container">
+                  
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+        </div>
+  
+        <div class="lower-part-card">
+          <h1 class="product-code">fcr5dc</h1>
+          <h1 class="product-name">men's po hoodie</h1>
+          <p class="product-detail">black(12)</p>
+          <p class="product-detail">gfx:screen print</p>
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+              
+      <div class="graphic-header">
+        <h1 class="graphic-title">
+          2025 CLASSIC COLLECTION - GRAPHIC OVERVIEW
+        </h1>
+        <div class="identifiers">
+          <div class="identifier apparel">
+            Indicates APPAREL Graphic
+          </div>
+          <div class="identifier headwear">
+            Indicates HEADWEAR Graphic
+          </div>
+        </div>
+      </div>
+    
+              <div class="graphic-cards-container">
+                  
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+          <div class="collection-page">
+              
+      <div class="graphic-header">
+        <h1 class="graphic-title">
+          2025 CLASSIC COLLECTION - GRAPHIC OVERVIEW
+        </h1>
+        <div class="identifiers">
+          <div class="identifier apparel">
+            Indicates APPAREL Graphic
+          </div>
+          <div class="identifier headwear">
+            Indicates HEADWEAR Graphic
+          </div>
+        </div>
+      </div>
+    
+              <div class="graphic-cards-container">
+                  
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #16a34a;">
+          fcr5dc
+        </div>
+      </div>
+    
+      <div class="graphic-card">
+        <div class="upper-part">
+          <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
+        </div>
+        <div class="lower-part" style="background-color: #ef4444;">
+          fcr5dc
+        </div>
+      </div>
+    
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+      
+              
+          <div class="full-image-section">
+              <img src="http://localhost:3000/images/guidelines.jpg" alt="guidelines" class="full-image"/>
+          </div>
+      
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 1.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 2.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 5.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 6.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 13.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 33.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 34.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 14.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 16.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+      <div class="guideline-page">
+          <div class='image-container'>
+              <img src="http://localhost:3000/images/guideline/Artboard 17.jpg" alt="Guideline image" class="image" />
+              </div>
+              
+      <div class="footer">
+        <p class="footer-note">
+          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+        </p>
+  
+        <div class="footer-bar">
+          <div class="left-side">
+            <div class="ccm-logo-name">
+            <img src="http://localhost:3000/images/ccm.jpg" alt='ccm logo' class="image"/>
+            </div>
+            <div class="university-name">
+              2026 LICENSED CONCEPTS - UNIV OF NEBRASKA-OMAHA
+            </div>
+          </div>
+  
+          <div class="footer-right">
+            <p class="footer-date">12.11.24</p>
+            <p class="footer-version">V1</p>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    
+          </body>
+          </html>
+          
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
