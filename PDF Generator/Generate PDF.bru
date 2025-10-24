@@ -55,12 +55,12 @@ body:text {
       overflow:hidden;
       align-items:center;
       flex-direction:row;
-      height:99vh;
+      height:100vh;
       }
       
       .left-side-cover {
       height:100%;
-      width: 65%;
+      width: 63%;
       overflow: hidden;
     }
   
@@ -91,13 +91,21 @@ body:text {
       font-family: gothic;
     }
   
-    .main-title {
+    .main-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:0.5px;
+    }
+  
+    .main-title h1 {
       text-transform: uppercase;
-      font-size: 50px;
+      font-size: 43px;
       font-weight: 500;
-      letter-spacing: -1px;
-      line-height: 1.2;
+      letter-spacing: 1px;
       color: #262626;
+      line-height:1;
       font-family: gothic;
     }
   
@@ -160,12 +168,11 @@ body:text {
           flex: 1;
           display: flex;
           flex-wrap: wrap;
-          gap: 64px;
+          gap: 44px;
           justify-content: center;
           align-items: flex-start;
           padding: 20px;
-          margin-bottom:-15px;
-          column-gap: 40px;
+          column-gap: 20px;
       }
       .graphic-cards-container {
           width: 100%;
@@ -199,79 +206,91 @@ body:text {
   
       
     @font-face {
-        font-family:elzaLight;
+        font-family: elzaLight;
         src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
     }
     @font-face {
-        font-family:gothic;
+        font-family: gothic;
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
     .card {
-      width: 16rem; /* ~68 Tailwind width */
-      height: 18rem; /* h-80 */
+      width: 2.7in;
+      height: 3.1in;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-      background-color:green;
+      background: white;
+      page-break-inside: avoid;
     }
   
-    .upper-part {
+    .upper-part-card {
       width: 100%;
-      height: 90% !important;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
-      background-color:blue;
     }
   
-    .upper-part img {
+    .upper-part-card img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
   
     .lower-part-card {
-      flex: 1;
       width: 100%;
+      padding: 8px 4px 10px 4px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 0.1px !important;
       text-align: center;
-      line-height:0px;
-      }
-      
-      .product-code {
-        font-size: 25px;
-        font-weight: 500;
-        color: #000;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        line-height:0px;
-        font-family:gothic;
-        }
-        
-        .product-name {
-          font-size: 15px;
-          font-weight: 600;
-          color: #000;
-          text-transform: uppercase;
-          font-family:elzaLight;
-          line-height:0px;
-          }
-          
-          .product-detail {
-            font-size: 7px;
-            line-height:0px;
+      background: white;
+    }
+    
+    .product-code {
+      font-size: 24pt;
+      font-weight: 900;
+      color: #000;
       text-transform: uppercase;
+      letter-spacing: -0.5pt;
+      line-height: 1;
+      margin: 0 0 4px 0;
+      font-family: gothic, 'Arial Black', sans-serif;
+    }
+    
+    .product-name {
+      font-size: 11pt;
       font-weight: 600;
       color: #000;
-      font-family:elzaLight;
+      text-transform: uppercase;
+      font-family: elzaLight, Arial, sans-serif;
+      line-height: 1.1;
+      margin: 0 0 3px 0;
+      letter-spacing: 0.3pt;
+    }
+    
+    .product-detail {
+      font-size: 7pt;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: #000;
+      font-family: elzaLight, Arial, sans-serif;
+      margin: 0;
+      letter-spacing: 0.2pt;
     }
   
     @media print {
       .card {
         page-break-inside: avoid;
+        break-inside: avoid;
       }
     }
   
@@ -546,12 +565,11 @@ body:text {
           flex: 1;
           display: flex;
           flex-wrap: wrap;
-          gap: 64px;
+          gap: 44px;
           justify-content: center;
           align-items: flex-start;
           padding: 20px;
-          margin-bottom:-15px;
-          column-gap: 40px;
+          column-gap: 20px;
       }
       .graphic-cards-container {
           width: 100%;
@@ -585,79 +603,91 @@ body:text {
   
       
     @font-face {
-        font-family:elzaLight;
+        font-family: elzaLight;
         src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
     }
     @font-face {
-        font-family:gothic;
+        font-family: gothic;
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
     .card {
-      width: 16rem; /* ~68 Tailwind width */
-      height: 18rem; /* h-80 */
+      width: 2.7in;
+      height: 3.1in;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-      background-color:green;
+      background: white;
+      page-break-inside: avoid;
     }
   
-    .upper-part {
+    .upper-part-card {
       width: 100%;
-      height: 90% !important;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
-      background-color:blue;
     }
   
-    .upper-part img {
+    .upper-part-card img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
   
     .lower-part-card {
-      flex: 1;
       width: 100%;
+      padding: 8px 4px 10px 4px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 0.1px !important;
       text-align: center;
-      line-height:0px;
-      }
-      
-      .product-code {
-        font-size: 25px;
-        font-weight: 500;
-        color: #000;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        line-height:0px;
-        font-family:gothic;
-        }
-        
-        .product-name {
-          font-size: 15px;
-          font-weight: 600;
-          color: #000;
-          text-transform: uppercase;
-          font-family:elzaLight;
-          line-height:0px;
-          }
-          
-          .product-detail {
-            font-size: 7px;
-            line-height:0px;
+      background: white;
+    }
+    
+    .product-code {
+      font-size: 24pt;
+      font-weight: 900;
+      color: #000;
       text-transform: uppercase;
+      letter-spacing: -0.5pt;
+      line-height: 1;
+      margin: 0 0 4px 0;
+      font-family: gothic, 'Arial Black', sans-serif;
+    }
+    
+    .product-name {
+      font-size: 11pt;
       font-weight: 600;
       color: #000;
-      font-family:elzaLight;
+      text-transform: uppercase;
+      font-family: elzaLight, Arial, sans-serif;
+      line-height: 1.1;
+      margin: 0 0 3px 0;
+      letter-spacing: 0.3pt;
+    }
+    
+    .product-detail {
+      font-size: 7pt;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: #000;
+      font-family: elzaLight, Arial, sans-serif;
+      margin: 0;
+      letter-spacing: 0.2pt;
     }
   
     @media print {
       .card {
         page-break-inside: avoid;
+        break-inside: avoid;
       }
     }
   
@@ -932,12 +962,11 @@ body:text {
           flex: 1;
           display: flex;
           flex-wrap: wrap;
-          gap: 64px;
+          gap: 44px;
           justify-content: center;
           align-items: flex-start;
           padding: 20px;
-          margin-bottom:-15px;
-          column-gap: 40px;
+          column-gap: 20px;
       }
       .graphic-cards-container {
           width: 100%;
@@ -971,79 +1000,91 @@ body:text {
   
       
     @font-face {
-        font-family:elzaLight;
+        font-family: elzaLight;
         src: url('http://localhost:3000/fonts/ElzaNarrowLight.ttf');
     }
     @font-face {
-        font-family:gothic;
+        font-family: gothic;
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
     .card {
-      width: 16rem; /* ~68 Tailwind width */
-      height: 18rem; /* h-80 */
+      width: 2.7in;
+      height: 3.1in;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-      background-color:green;
+      background: white;
+      page-break-inside: avoid;
     }
   
-    .upper-part {
+    .upper-part-card {
       width: 100%;
-      height: 90% !important;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
-      background-color:blue;
     }
   
-    .upper-part img {
+    .upper-part-card img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
   
     .lower-part-card {
-      flex: 1;
       width: 100%;
+      padding: 8px 4px 10px 4px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 0.1px !important;
       text-align: center;
-      line-height:0px;
-      }
-      
-      .product-code {
-        font-size: 25px;
-        font-weight: 500;
-        color: #000;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        line-height:0px;
-        font-family:gothic;
-        }
-        
-        .product-name {
-          font-size: 15px;
-          font-weight: 600;
-          color: #000;
-          text-transform: uppercase;
-          font-family:elzaLight;
-          line-height:0px;
-          }
-          
-          .product-detail {
-            font-size: 7px;
-            line-height:0px;
+      background: white;
+    }
+    
+    .product-code {
+      font-size: 24pt;
+      font-weight: 900;
+      color: #000;
       text-transform: uppercase;
+      letter-spacing: -0.5pt;
+      line-height: 1;
+      margin: 0 0 4px 0;
+      font-family: gothic, 'Arial Black', sans-serif;
+    }
+    
+    .product-name {
+      font-size: 11pt;
       font-weight: 600;
       color: #000;
-      font-family:elzaLight;
+      text-transform: uppercase;
+      font-family: elzaLight, Arial, sans-serif;
+      line-height: 1.1;
+      margin: 0 0 3px 0;
+      letter-spacing: 0.3pt;
+    }
+    
+    .product-detail {
+      font-size: 7pt;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: #000;
+      font-family: elzaLight, Arial, sans-serif;
+      margin: 0;
+      letter-spacing: 0.2pt;
     }
   
     @media print {
       .card {
         page-break-inside: avoid;
+        break-inside: avoid;
       }
     }
   
@@ -1466,9 +1507,11 @@ body:text {
   
         <div class="right-side-cover">
           <div class="year-box">2025</div>
-          <h1 class="main-title">
-            LICENSED <br> APPAREL & HEADWEAR <br> CONCEPTS
-          </h1>
+          <div class="main-title">
+          <h1>LICENSED</h1>
+          <h1>APPAREL & HEADWEAR</h1>
+          <h1>CONCEPTS</h1>
+          </div>
           <div class="divider"></div>
           <div class="logo-container">
             <img src="http://localhost:3000/images/LOGO.jpg" alt="logo" />
@@ -1490,130 +1533,130 @@ body:text {
               <div class="cards-container">
                   
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
@@ -1652,52 +1695,52 @@ body:text {
               <div class="cards-container">
                   
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
@@ -1919,130 +1962,130 @@ body:text {
               <div class="cards-container">
                   
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
@@ -2081,52 +2124,52 @@ body:text {
               <div class="cards-container">
                   
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
@@ -2348,130 +2391,130 @@ body:text {
               <div class="cards-container">
                   
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
@@ -2510,52 +2553,52 @@ body:text {
               <div class="cards-container">
                   
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
       </div>
     
       <div class="card">
-        <div class="upper-part">
+        <div class="upper-part-card">
           <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
         </div>
   
         <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
-          <h1 class="product-name">men's po hoodie</h1>
+          <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
           <p class="product-detail">gfx:screen print</p>
         </div>
@@ -2830,7 +2873,7 @@ body:text {
     
       <div class="guideline-page">
           <div class='image-container'>
-              <img src="http://localhost:3000/images/guideline/Artboard 5.jpg" alt="Guideline image" class="image" />
+              <img src="http://localhost:3000/images/guideline/Artboard 5.webp" alt="Guideline image" class="image" />
               </div>
               
       <div class="footer">
@@ -2859,7 +2902,7 @@ body:text {
     
       <div class="guideline-page">
           <div class='image-container'>
-              <img src="http://localhost:3000/images/guideline/Artboard 6.jpg" alt="Guideline image" class="image" />
+              <img src="http://localhost:3000/images/guideline/Artboard 6.webp" alt="Guideline image" class="image" />
               </div>
               
       <div class="footer">
@@ -2888,7 +2931,7 @@ body:text {
     
       <div class="guideline-page">
           <div class='image-container'>
-              <img src="http://localhost:3000/images/guideline/Artboard 13.jpg" alt="Guideline image" class="image" />
+              <img src="http://localhost:3000/images/guideline/Artboard 13.webp" alt="Guideline image" class="image" />
               </div>
               
       <div class="footer">
@@ -2917,7 +2960,7 @@ body:text {
     
       <div class="guideline-page">
           <div class='image-container'>
-              <img src="http://localhost:3000/images/guideline/Artboard 33.jpg" alt="Guideline image" class="image" />
+              <img src="http://localhost:3000/images/guideline/Artboard 33.webp" alt="Guideline image" class="image" />
               </div>
               
       <div class="footer">
@@ -2946,7 +2989,7 @@ body:text {
     
       <div class="guideline-page">
           <div class='image-container'>
-              <img src="http://localhost:3000/images/guideline/Artboard 34.jpg" alt="Guideline image" class="image" />
+              <img src="http://localhost:3000/images/guideline/Artboard 34.webp" alt="Guideline image" class="image" />
               </div>
               
       <div class="footer">
@@ -2975,7 +3018,7 @@ body:text {
     
       <div class="guideline-page">
           <div class='image-container'>
-              <img src="http://localhost:3000/images/guideline/Artboard 14.jpg" alt="Guideline image" class="image" />
+              <img src="http://localhost:3000/images/guideline/Artboard 14.webp" alt="Guideline image" class="image" />
               </div>
               
       <div class="footer">
@@ -3004,7 +3047,7 @@ body:text {
     
       <div class="guideline-page">
           <div class='image-container'>
-              <img src="http://localhost:3000/images/guideline/Artboard 16.jpg" alt="Guideline image" class="image" />
+              <img src="http://localhost:3000/images/guideline/Artboard 16.webp" alt="Guideline image" class="image" />
               </div>
               
       <div class="footer">
@@ -3033,7 +3076,7 @@ body:text {
     
       <div class="guideline-page">
           <div class='image-container'>
-              <img src="http://localhost:3000/images/guideline/Artboard 17.jpg" alt="Guideline image" class="image" />
+              <img src="http://localhost:3000/images/guideline/Artboard 17.webp" alt="Guideline image" class="image" />
               </div>
               
       <div class="footer">

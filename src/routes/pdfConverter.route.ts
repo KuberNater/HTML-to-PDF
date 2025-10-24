@@ -1,5 +1,5 @@
-import express from "express";
-import { generatePDF } from "../controllers/pdfConverter.controller";
+import express from 'express';
+import { generatePDF } from '../controllers/pdfConverter.controller';
 
 const router = express.Router();
 

@@ -5,19 +5,26 @@
   "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@myriaddreamin/typst-ts-node-compiler": "0.6.1-rc3",
+    "@myriaddreamin/typst-ts-web-compiler": "0.6.1-rc3",
+    "@myriaddreamin/typst.ts": "0.6.1-rc3",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "eslint": "^9.37.0",
     "express": "^5.1.0",
+    "htmltopdf": "link:",
     "prettier": "^3.6.2",
     "puppeteer": "^24.25.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typist": "^0.1.0",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
