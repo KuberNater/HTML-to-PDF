@@ -8,12 +8,18 @@ const puppeteer_1 = __importDefault(require("puppeteer"));
 const generatePDF = async (req, res) => {
     const htmlContent = req.body;
     if (!htmlContent) {
-        return res.status(400).send('No HTML content provided in the request body.');
+        return res
+            .status(400)
+            .send('No HTML content provided in the request body.');
     }
     try {
         const browser = await puppeteer_1.default.launch({
             headless: true,
-            args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-web-security']
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-web-security',
+            ],
         });
         const page = await browser.newPage();
         await page.coverage.startCSSCoverage();
@@ -34,8 +40,8 @@ const generatePDF = async (req, res) => {
                 top: 0,
                 right: 0,
                 bottom: 0,
-                left: 0
-            }
+                left: 0,
+            },
         });
         await browser.close();
         res.setHeader('Content-Type', 'application/pdf');
@@ -48,7 +54,7 @@ const generatePDF = async (req, res) => {
         console.error('Error generating PDF:', error);
         return res.status(500).json({
             error: 'Failed to generate PDF',
-            message: error.message
+            message: error.message,
         });
     }
 };
