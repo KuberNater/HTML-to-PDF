@@ -137,3 +137,4 @@ GET http://localhost:8000/health
 - `pnpm run start` - Start the production server
 - `pnpm run dev` - Start development server with hot-reload (if configured)
 - `pnpm run format` - Formats the codebase using Prettier
+- `docker-compose up --build` - Build the image and run via docker
