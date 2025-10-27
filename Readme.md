@@ -138,3 +138,7 @@ GET http://localhost:8000/health
 - `pnpm run dev` - Start development server with hot-reload (if configured)
 - `pnpm run format` - Formats the codebase using Prettier
 - `docker-compose up --build` - Build the image and run via docker
+
+
+## Deployment 
+The entire server is containerized and deployed on the Render.com at https://htmltopdf-server.onrender.com
