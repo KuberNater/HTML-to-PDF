@@ -92,7 +92,8 @@ body:text {
       align-items:center;
       justify-content:center;
       color: #262626;
-      padding: 3px 0px !important;
+      width:170px;
+      height:65px;
     }
   
     .year-box h1{
@@ -102,6 +103,7 @@ body:text {
       margin-right: -10px;
       text-indent: 5px;
       font-family: gothic;
+      margin-top:1px;
     }
   
     .main-title{
@@ -129,8 +131,9 @@ body:text {
     }
   
     .logo-container {
-      width: 300px;
-      height: 300px;
+    margin-top:20px
+      width: 250px;
+      height: 250px;
       overflow: hidden;
     }
   
@@ -141,10 +144,10 @@ body:text {
     }
   
     .university {
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 22px;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 3px;
       color: #262626;
       font-family: elzaLight;
     }
@@ -181,11 +184,10 @@ body:text {
           flex: 1;
           display: flex;
           flex-wrap: wrap;
-          gap: 44px;
+          gap: 35px !important;
           justify-content: center;
           align-items: flex-start;
           padding: 20px;
-          column-gap: 20px;
       }
       .graphic-cards-container {
           width: 100%;
@@ -205,16 +207,20 @@ body:text {
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
     .header {
-      margin-top: 30px !important;
-      padding: 0px 20px 0px 80px;
+      margin-top: 25px !important;
+          height: 45px !important;
+      padding: 0px 10px 0px 75px;
       background-color: #262626;
       color: #ffffff;
       font-weight: 100;
-      font-size: 40px;
+      font-size: 30px;
       text-transform: uppercase;
       width: fit-content;
       letter-spacing: 1.5px;
       font-family:gothic;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
   
       
@@ -234,69 +240,73 @@ body:text {
     }
   
     .card {
-      width: 2.7in;
-      height: 3.1in;
+      width: 2.5in;
+      height: 3.3in;
       display: flex;
       flex-direction: column;
       background: white;
       page-break-inside: avoid;
-      background-color:teal;
+      }
+      
+      .upper-part-card {
+        width: 100%;
+        height: 82%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.1in;
+        }
+        
+        .collection-image-container{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
     }
   
-    .upper-part-card {
-      width: 100%;
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-  
-    .upper-part-card img {
+    .collection-image-container img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   
     .lower-part-card {
       width: 100%;
-      padding: 8px 4px 10px 4px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      background: white;
+      flex:1;
     }
     
     .product-code {
-      font-size: 24pt;
+      font-size: 22pt;
       font-weight: 900;
       color: #000;
       text-transform: uppercase;
-      letter-spacing: -0.5pt;
+      letter-spacing: 0.3pt;
       line-height: 1;
       margin: 0 0 4px 0;
-      font-family: gothic, 'Arial Black', sans-serif;
+      font-family: gothic;
     }
     
     .product-name {
-      font-size: 11pt;
+      font-size: 14pt;
       font-weight: 600;
       color: #000;
       text-transform: uppercase;
-      font-family: elzaLight, Arial, sans-serif;
+      font-family: elzaLight;
       line-height: 1.1;
-      margin: 0 0 3px 0;
       letter-spacing: 0.3pt;
     }
     
     .product-detail {
-      font-size: 7pt;
-      line-height: 1.2;
+      font-size: 9pt;
       text-transform: uppercase;
       font-weight: 400;
       color: #000;
-      font-family: elzaLight, Arial, sans-serif;
+      font-family: elzaLight;
       margin: 0;
       letter-spacing: 0.2pt;
     }
@@ -321,6 +331,7 @@ body:text {
       width:100%;
       height:100%;
       object-fit: contain;
+      margin-top:1px !important;
     }
     .footer {
       position: relative;
@@ -329,9 +340,9 @@ body:text {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      height: 64px !important;
+      height: 45px !important;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin-bottom:18px;
+      margin-bottom: 18.5px !important;
       }
   
     .footer-note {
@@ -366,14 +377,13 @@ body:text {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100%;
-      margin-bottom:5px;  
+      height: 100%;  
     }
   
     .university-name {
       padding: 0px 28px;
       font-weight: 500;
-      font-size: 40px;
+      font-size: 30px;
       text-transform: uppercase;
       border-right: 2px solid #ffffff;
       display: flex;
@@ -389,7 +399,7 @@ body:text {
       height: 100%;
       display: flex;
       align-items: center;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 300;
       text-transform: uppercase;
       padding-right: 128px;
@@ -429,7 +439,7 @@ body:text {
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
     .graphic-card {
-      width: 20rem; /* w-96 */
+      width: 20.5rem; /* w-96 */
       height: 15rem; /* h-60 */
       display: flex;
       flex-direction: column;
@@ -490,45 +500,49 @@ body:text {
     }
   
     .graphic-title {
-      margin-top: 28px; /* mt-7 */
-      padding: 5px 20px 5px 80px; /* px-5 pl-20 py-2 */
-      background-color: #262626; /* bg-neutral-800 */
+      margin-top: 28px; 
+      padding: 0px 20px 0px 80px; 
+      background-color: #262626; 
       color: #ffffff;
-      font-weight: 500; /* font-bold */
-      font-size: 40px; /* text-3xl */
+      font-weight: 500; 
+      font-size: 30px; 
       text-transform: uppercase;
       width: fit-content;
+      display:flex;
+      align-items:center;
+      justifuy-content:center;
+      height: 45px !important;
     }
   
     .identifiers {
       display: flex;
       align-items: center;
-      gap: 20px; /* gap-5 */
-      height: 56px; /* h-14 */
+      gap: 5px; 
+      height: 56px; 
       width: 100%;
-      margin-left: 80px; /* ml-20 to align with title padding-left */
+      margin-left: 80px;
       font-family:elzaLight;
       font-weight:500;
-      margin-top:-15px;
+      margin-top:1px;
     }
   
     .identifier {
-      padding: 12px; /* p-3 */
-      font-size: 18px; /* text-lg */
+      padding: 12px 26px !important; 
+      font-size: 15px; 
       color: #ffffff;
       text-transform: capitalize;
-      font-weight: 400; /* font-normal */
+      font-weight: 500;
       display: flex;
       align-items: center;
       justify-content: center;
     }
   
     .identifier.apparel {
-      background-color: #dc2626; /* bg-red-600 */
+      background-color: #dc2626; 
     }
   
     .identifier.headwear {
-      background-color: #16a34a; /* bg-green-600 */
+      background-color: #16A78F; 
     }
   
     @media print {
@@ -579,11 +593,10 @@ body:text {
           flex: 1;
           display: flex;
           flex-wrap: wrap;
-          gap: 44px;
+          gap: 35px !important;
           justify-content: center;
           align-items: flex-start;
           padding: 20px;
-          column-gap: 20px;
       }
       .graphic-cards-container {
           width: 100%;
@@ -603,16 +616,20 @@ body:text {
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
     .header {
-      margin-top: 30px !important;
-      padding: 0px 20px 0px 80px;
+      margin-top: 25px !important;
+          height: 45px !important;
+      padding: 0px 10px 0px 75px;
       background-color: #262626;
       color: #ffffff;
       font-weight: 100;
-      font-size: 40px;
+      font-size: 30px;
       text-transform: uppercase;
       width: fit-content;
       letter-spacing: 1.5px;
       font-family:gothic;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
   
       
@@ -632,69 +649,73 @@ body:text {
     }
   
     .card {
-      width: 2.7in;
-      height: 3.1in;
+      width: 2.5in;
+      height: 3.3in;
       display: flex;
       flex-direction: column;
       background: white;
       page-break-inside: avoid;
-      background-color:teal;
+      }
+      
+      .upper-part-card {
+        width: 100%;
+        height: 82%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.1in;
+        }
+        
+        .collection-image-container{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
     }
   
-    .upper-part-card {
-      width: 100%;
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-  
-    .upper-part-card img {
+    .collection-image-container img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   
     .lower-part-card {
       width: 100%;
-      padding: 8px 4px 10px 4px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      background: white;
+      flex:1;
     }
     
     .product-code {
-      font-size: 24pt;
+      font-size: 22pt;
       font-weight: 900;
       color: #000;
       text-transform: uppercase;
-      letter-spacing: -0.5pt;
+      letter-spacing: 0.3pt;
       line-height: 1;
       margin: 0 0 4px 0;
-      font-family: gothic, 'Arial Black', sans-serif;
+      font-family: gothic;
     }
     
     .product-name {
-      font-size: 11pt;
+      font-size: 14pt;
       font-weight: 600;
       color: #000;
       text-transform: uppercase;
-      font-family: elzaLight, Arial, sans-serif;
+      font-family: elzaLight;
       line-height: 1.1;
-      margin: 0 0 3px 0;
       letter-spacing: 0.3pt;
     }
     
     .product-detail {
-      font-size: 7pt;
-      line-height: 1.2;
+      font-size: 9pt;
       text-transform: uppercase;
       font-weight: 400;
       color: #000;
-      font-family: elzaLight, Arial, sans-serif;
+      font-family: elzaLight;
       margin: 0;
       letter-spacing: 0.2pt;
     }
@@ -719,6 +740,7 @@ body:text {
       width:100%;
       height:100%;
       object-fit: contain;
+      margin-top:1px !important;
     }
     .footer {
       position: relative;
@@ -727,9 +749,9 @@ body:text {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      height: 64px !important;
+      height: 45px !important;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin-bottom:18px;
+      margin-bottom: 18.5px !important;
       }
   
     .footer-note {
@@ -764,14 +786,13 @@ body:text {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100%;
-      margin-bottom:5px;  
+      height: 100%;  
     }
   
     .university-name {
       padding: 0px 28px;
       font-weight: 500;
-      font-size: 40px;
+      font-size: 30px;
       text-transform: uppercase;
       border-right: 2px solid #ffffff;
       display: flex;
@@ -787,7 +808,7 @@ body:text {
       height: 100%;
       display: flex;
       align-items: center;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 300;
       text-transform: uppercase;
       padding-right: 128px;
@@ -827,7 +848,7 @@ body:text {
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
     .graphic-card {
-      width: 20rem; /* w-96 */
+      width: 20.5rem; /* w-96 */
       height: 15rem; /* h-60 */
       display: flex;
       flex-direction: column;
@@ -888,45 +909,49 @@ body:text {
     }
   
     .graphic-title {
-      margin-top: 28px; /* mt-7 */
-      padding: 5px 20px 5px 80px; /* px-5 pl-20 py-2 */
-      background-color: #262626; /* bg-neutral-800 */
+      margin-top: 28px; 
+      padding: 0px 20px 0px 80px; 
+      background-color: #262626; 
       color: #ffffff;
-      font-weight: 500; /* font-bold */
-      font-size: 40px; /* text-3xl */
+      font-weight: 500; 
+      font-size: 30px; 
       text-transform: uppercase;
       width: fit-content;
+      display:flex;
+      align-items:center;
+      justifuy-content:center;
+      height: 45px !important;
     }
   
     .identifiers {
       display: flex;
       align-items: center;
-      gap: 20px; /* gap-5 */
-      height: 56px; /* h-14 */
+      gap: 5px; 
+      height: 56px; 
       width: 100%;
-      margin-left: 80px; /* ml-20 to align with title padding-left */
+      margin-left: 80px;
       font-family:elzaLight;
       font-weight:500;
-      margin-top:-15px;
+      margin-top:1px;
     }
   
     .identifier {
-      padding: 12px; /* p-3 */
-      font-size: 18px; /* text-lg */
+      padding: 12px 26px !important; 
+      font-size: 15px; 
       color: #ffffff;
       text-transform: capitalize;
-      font-weight: 400; /* font-normal */
+      font-weight: 500;
       display: flex;
       align-items: center;
       justify-content: center;
     }
   
     .identifier.apparel {
-      background-color: #dc2626; /* bg-red-600 */
+      background-color: #dc2626; 
     }
   
     .identifier.headwear {
-      background-color: #16a34a; /* bg-green-600 */
+      background-color: #16A78F; 
     }
   
     @media print {
@@ -977,11 +1002,10 @@ body:text {
           flex: 1;
           display: flex;
           flex-wrap: wrap;
-          gap: 44px;
+          gap: 35px !important;
           justify-content: center;
           align-items: flex-start;
           padding: 20px;
-          column-gap: 20px;
       }
       .graphic-cards-container {
           width: 100%;
@@ -1001,16 +1025,20 @@ body:text {
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
     .header {
-      margin-top: 30px !important;
-      padding: 0px 20px 0px 80px;
+      margin-top: 25px !important;
+          height: 45px !important;
+      padding: 0px 10px 0px 75px;
       background-color: #262626;
       color: #ffffff;
       font-weight: 100;
-      font-size: 40px;
+      font-size: 30px;
       text-transform: uppercase;
       width: fit-content;
       letter-spacing: 1.5px;
       font-family:gothic;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
   
       
@@ -1030,69 +1058,73 @@ body:text {
     }
   
     .card {
-      width: 2.7in;
-      height: 3.1in;
+      width: 2.5in;
+      height: 3.3in;
       display: flex;
       flex-direction: column;
       background: white;
       page-break-inside: avoid;
-      background-color:teal;
+      }
+      
+      .upper-part-card {
+        width: 100%;
+        height: 82%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.1in;
+        }
+        
+        .collection-image-container{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
     }
   
-    .upper-part-card {
-      width: 100%;
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-  
-    .upper-part-card img {
+    .collection-image-container img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   
     .lower-part-card {
       width: 100%;
-      padding: 8px 4px 10px 4px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      background: white;
+      flex:1;
     }
     
     .product-code {
-      font-size: 24pt;
+      font-size: 22pt;
       font-weight: 900;
       color: #000;
       text-transform: uppercase;
-      letter-spacing: -0.5pt;
+      letter-spacing: 0.3pt;
       line-height: 1;
       margin: 0 0 4px 0;
-      font-family: gothic, 'Arial Black', sans-serif;
+      font-family: gothic;
     }
     
     .product-name {
-      font-size: 11pt;
+      font-size: 14pt;
       font-weight: 600;
       color: #000;
       text-transform: uppercase;
-      font-family: elzaLight, Arial, sans-serif;
+      font-family: elzaLight;
       line-height: 1.1;
-      margin: 0 0 3px 0;
       letter-spacing: 0.3pt;
     }
     
     .product-detail {
-      font-size: 7pt;
-      line-height: 1.2;
+      font-size: 9pt;
       text-transform: uppercase;
       font-weight: 400;
       color: #000;
-      font-family: elzaLight, Arial, sans-serif;
+      font-family: elzaLight;
       margin: 0;
       letter-spacing: 0.2pt;
     }
@@ -1117,6 +1149,7 @@ body:text {
       width:100%;
       height:100%;
       object-fit: contain;
+      margin-top:1px !important;
     }
     .footer {
       position: relative;
@@ -1125,9 +1158,9 @@ body:text {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      height: 64px !important;
+      height: 45px !important;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin-bottom:18px;
+      margin-bottom: 18.5px !important;
       }
   
     .footer-note {
@@ -1162,14 +1195,13 @@ body:text {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100%;
-      margin-bottom:5px;  
+      height: 100%;  
     }
   
     .university-name {
       padding: 0px 28px;
       font-weight: 500;
-      font-size: 40px;
+      font-size: 30px;
       text-transform: uppercase;
       border-right: 2px solid #ffffff;
       display: flex;
@@ -1185,7 +1217,7 @@ body:text {
       height: 100%;
       display: flex;
       align-items: center;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 300;
       text-transform: uppercase;
       padding-right: 128px;
@@ -1225,7 +1257,7 @@ body:text {
         src: url('http://localhost:3000/fonts/TabletGothicHeavy.ttf');
     }
     .graphic-card {
-      width: 20rem; /* w-96 */
+      width: 20.5rem; /* w-96 */
       height: 15rem; /* h-60 */
       display: flex;
       flex-direction: column;
@@ -1286,45 +1318,49 @@ body:text {
     }
   
     .graphic-title {
-      margin-top: 28px; /* mt-7 */
-      padding: 5px 20px 5px 80px; /* px-5 pl-20 py-2 */
-      background-color: #262626; /* bg-neutral-800 */
+      margin-top: 28px; 
+      padding: 0px 20px 0px 80px; 
+      background-color: #262626; 
       color: #ffffff;
-      font-weight: 500; /* font-bold */
-      font-size: 40px; /* text-3xl */
+      font-weight: 500; 
+      font-size: 30px; 
       text-transform: uppercase;
       width: fit-content;
+      display:flex;
+      align-items:center;
+      justifuy-content:center;
+      height: 45px !important;
     }
   
     .identifiers {
       display: flex;
       align-items: center;
-      gap: 20px; /* gap-5 */
-      height: 56px; /* h-14 */
+      gap: 5px; 
+      height: 56px; 
       width: 100%;
-      margin-left: 80px; /* ml-20 to align with title padding-left */
+      margin-left: 80px;
       font-family:elzaLight;
       font-weight:500;
-      margin-top:-15px;
+      margin-top:1px;
     }
   
     .identifier {
-      padding: 12px; /* p-3 */
-      font-size: 18px; /* text-lg */
+      padding: 12px 26px !important; 
+      font-size: 15px; 
       color: #ffffff;
       text-transform: capitalize;
-      font-weight: 400; /* font-normal */
+      font-weight: 500;
       display: flex;
       align-items: center;
       justify-content: center;
     }
   
     .identifier.apparel {
-      background-color: #dc2626; /* bg-red-600 */
+      background-color: #dc2626; 
     }
   
     .identifier.headwear {
-      background-color: #16a34a; /* bg-green-600 */
+      background-color: #16A78F; 
     }
   
     @media print {
@@ -1361,6 +1397,8 @@ body:text {
     .full-image {
       width: 100%;
       display: block;
+      height:100%;
+      object-fit: fill;
       margin: 0;
       padding: 0;
       border: none;
@@ -1391,6 +1429,7 @@ body:text {
       width:100%;
       height:100%;
       object-fit: contain;
+      margin-top:1px !important;
     }
     .footer {
       position: relative;
@@ -1399,9 +1438,9 @@ body:text {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      height: 64px !important;
+      height: 45px !important;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin-bottom:18px;
+      margin-bottom: 18.5px !important;
       }
   
     .footer-note {
@@ -1436,14 +1475,13 @@ body:text {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100%;
-      margin-bottom:5px;  
+      height: 100%;  
     }
   
     .university-name {
       padding: 0px 28px;
       font-weight: 500;
-      font-size: 40px;
+      font-size: 30px;
       text-transform: uppercase;
       border-right: 2px solid #ffffff;
       display: flex;
@@ -1459,7 +1497,7 @@ body:text {
       height: 100%;
       display: flex;
       align-items: center;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 300;
       text-transform: uppercase;
       padding-right: 128px;
@@ -1499,7 +1537,7 @@ body:text {
     .image{
       width:100%;
       height:100%;
-      object-fit: contain;
+      object-fit: fill;
     }
   
     @media print {
@@ -1524,6 +1562,7 @@ body:text {
         <div class="right-side-cover">
           <div class="year-box">
           <h1>2025</h1>
+  
           </div>
           <div class="main-title">
           <h1>LICENSED</h1>
@@ -1552,10 +1591,11 @@ body:text {
                   
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1565,10 +1605,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1578,10 +1619,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1591,10 +1633,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1604,10 +1647,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1617,10 +1661,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1630,10 +1675,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1643,10 +1689,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1656,10 +1703,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1669,10 +1717,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1684,7 +1733,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -1714,10 +1763,11 @@ body:text {
                   
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1727,10 +1777,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1740,10 +1791,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1753,10 +1805,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1768,7 +1821,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -1812,7 +1865,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -1830,7 +1883,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -1848,7 +1901,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -1866,7 +1919,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -1884,7 +1937,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -1928,7 +1981,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -1946,7 +1999,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -1981,10 +2034,11 @@ body:text {
                   
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -1994,10 +2048,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2007,10 +2062,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2020,10 +2076,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2033,10 +2090,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2046,10 +2104,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2059,10 +2118,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2072,10 +2132,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2085,10 +2146,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2098,10 +2160,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2113,7 +2176,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2143,10 +2206,11 @@ body:text {
                   
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2156,10 +2220,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2169,10 +2234,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2182,10 +2248,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2197,7 +2264,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2241,7 +2308,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2259,7 +2326,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2277,7 +2344,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2295,7 +2362,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2313,7 +2380,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2357,7 +2424,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2375,7 +2442,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2410,10 +2477,11 @@ body:text {
                   
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2423,10 +2491,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2436,10 +2505,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2449,10 +2519,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2462,10 +2533,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2475,10 +2547,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2488,10 +2561,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2501,10 +2575,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2514,10 +2589,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2527,10 +2603,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2542,7 +2619,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2572,10 +2649,11 @@ body:text {
                   
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2585,10 +2663,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2598,10 +2677,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2611,10 +2691,11 @@ body:text {
     
       <div class="card">
         <div class="upper-part-card">
-          <img src="http://localhost:3000/images/collection.jpg" alt="collection-img" />
+          <div class="collection-image-container">
+          <img src="http://localhost:3000/images/collection.png" alt="collection-img" />
+          </div>
         </div>
-  
-        <div class="lower-part-card">
+              <div class="lower-part-card">
           <h1 class="product-code">fcr5dc</h1>
           <h2 class="product-name">men's po hoodie</h2>
           <p class="product-detail">black(12)</p>
@@ -2626,7 +2707,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2670,7 +2751,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2688,7 +2769,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2706,7 +2787,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2724,7 +2805,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2742,7 +2823,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2786,7 +2867,7 @@ body:text {
         <div class="upper-part">
           <img src="http://localhost:3000/images/graphic.jpg" alt="Graphic Card" />
         </div>
-        <div class="lower-part" style="background-color: #16a34a;">
+        <div class="lower-part" style="background-color: #16A78F;">
           fcr5dc
         </div>
       </div>
@@ -2804,7 +2885,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2838,7 +2919,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2867,7 +2948,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2896,7 +2977,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2925,7 +3006,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2954,7 +3035,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -2983,7 +3064,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -3012,7 +3093,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -3041,7 +3122,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -3070,7 +3151,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
@@ -3099,7 +3180,7 @@ body:text {
               
       <div class="footer">
         <p class="footer-note">
-          '© 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
+          © 2024 Sports Maska Inc. All rights reserved. This document is CONFIDENTIAL. All designs are the copyright of Sports Maska Inc.
         </p>
   
         <div class="footer-bar">
