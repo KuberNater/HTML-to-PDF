@@ -141,4 +141,7 @@ GET http://localhost:8000/health
 
 
 ## Deployment 
-The entire server is containerized and deployed on the Render.com at https://htmltopdf-server.onrender.com
+The entire server is containerized and deployed on the Render.com at https://htmltopdf-server.onrender.com (for testing use this).
+<br/>
+<br/>
+The server is also deployed on the Azure container registry at https://dockercontainer327.yellowbeach-d2b2d9ea.eastus.azurecontainerapps.io (Do not perform repeatative testing on this container.)
