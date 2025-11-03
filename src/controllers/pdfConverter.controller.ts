@@ -29,7 +29,7 @@ export const generatePDF = async (req: Request, res: Response) => {
     });
 
     // Generate PDF
-    const pdfBuffer = await page.pdf({
+    const pdfBuffer:Uint8Array<ArrayBufferLike> = await page.pdf({
       width: '16in',
       height: '9in',
       printBackground: true,
@@ -52,7 +52,7 @@ export const generatePDF = async (req: Request, res: Response) => {
     res.setHeader('Content-Length', pdfBuffer.length);
 
     // Send the PDF buffer
-    return res.send(pdfBuffer);
+     res.send(pdfBuffer);
   } catch (error) {
     console.error('Error generating PDF:', error);
     return res.status(500).json({

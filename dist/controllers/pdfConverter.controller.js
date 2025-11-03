@@ -48,7 +48,7 @@ const generatePDF = async (req, res) => {
         res.setHeader('Content-Disposition', 'attachment; filename="document.pdf"');
         res.setHeader('Content-Length', pdfBuffer.length);
         // Send the PDF buffer
-        return res.send(pdfBuffer);
+        res.send(pdfBuffer);
     }
     catch (error) {
         console.error('Error generating PDF:', error);
